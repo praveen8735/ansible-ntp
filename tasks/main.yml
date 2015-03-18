@@ -1,4 +1,4 @@
 ---
 - name: Start/stop ntp service
-service: name=ntpd state=started enabled=yes
+  service: name=ntpd state=started enabled=yes
 
