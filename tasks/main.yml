@@ -1,4 +1,4 @@
 ---
 - name: Start/stop ntp service
-service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }} pattern='/ntpd'
-tags: [ 'service', 'ntp' ]
+service: name=ntpd state=started enabled=yes
+
