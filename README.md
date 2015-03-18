@@ -1,4 +1,4 @@
-NTP Service
+NTP Service [![Build Status](https://travis-ci.org/praveen8735/ansible-ntp.svg?branch=master)](https://travis-ci.org/praveen8735/ansible-ntp)
 ===
 
 
