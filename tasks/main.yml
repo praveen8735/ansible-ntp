@@ -1,15 +1,3 @@
---- 
-- 
-  name: "Ensure Opsware agent is running on Linux & Solaris"
-  notify: 
-    - "hardware refresh"
-    - "software refresh"
-    - "opsware notify"
-  service: "name=opsware-agent state=started enabled=yes"
-- 
-  name: "Ensure Opsware agent is running on AIX"
-  notify: 
-    - "hardware refresh"
-    - "software refresh"
-    - "opsware notify"
-  service: "name={{ aix_service_path }} state=started enabled=yes"
+---
+- name: Start/stop ntp service
+  service: name=ntp state=started enabled=yes
