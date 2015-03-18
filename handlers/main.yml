@@ -1,13 +1,3 @@
---- 
-- 
-  command: "chdir=/opt/opsware/agent/pylibs/cog/ ./bs_hardware"
-  name: "hardware refresh"
-- 
-  command: "chdir=/opt/opsware/agent/pylibs/cog/ ./bs_Software"
-  name: "software refresh"
-- 
-  ignore_errors: true
-  local_action: "hipchat token={{ hc_token }} room={{ hc_room }} msg=\"Role 'opsware' applied to {{ ansible_hostname }} at {{ ansible_date_time.iso8601 }}\""
-  name: "opsware notify"
-  sudo: false
-  when: "not quiet | bool"
+---
+- name: restart ntp
+  service: name=ntpd state=restarted
