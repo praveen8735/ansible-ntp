@@ -6,6 +6,7 @@ before_install:
  - sudo apt-get install -qq python-apt python-pycurl
 install:
   - pip install ansible
+  - pip install ntp
   - "printf '[defaults]\\nroles_path = ../' > ansible.cfg"
 script:
   - echo localhost > tests/inventory
